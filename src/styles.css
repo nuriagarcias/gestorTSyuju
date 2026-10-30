@@ -10,7 +10,8 @@ p{
     color:#3368A0;
     margin-bottom: 20px;
     margin-top: 30px;
-    text-align: center;
+
+    font-family: "Cantarell Extra Bold", sans-serif;
 }
 
 body {
@@ -21,7 +22,10 @@ body {
 }
 
 body.vermell{
-    background-color: #f4b0f6;
+    background-color: #1b2349;
+    color: white;
+    font-family: lilita-one;
+    border-radious: none
 }
 
 h1 {
@@ -38,8 +42,6 @@ h1 {
 }
 
 .card1 {
-    /*display: grid;*/
-    /*grid-template-columns: 3fr 2fr;*/
     background: #66A3BF;
     padding: 20px;
     border-radius: 20px;
@@ -48,7 +50,6 @@ h1 {
 }
 
 .card1 h2 {
-
     font-size: 1.1rem;
     margin-bottom: 15px;
     border-bottom: 2px solid #e2e8f0;
@@ -57,8 +58,6 @@ h1 {
 }
 
 .card2 {
-    /*display: grid;*/
-    /*grid-template-columns: 3fr 2fr;*/
     background: #66A3BF;
     padding: 20px;
     border-radius: 20px;
@@ -67,7 +66,6 @@ h1 {
 }
 
 .card2 h2 {
-
     font-size: 1.1rem;
     margin-bottom: 15px;
     border-bottom: 2px solid #e2e8f0;
@@ -75,8 +73,6 @@ h1 {
 }
 
 .card3 {
-    /*display: grid;*/
-    /*grid-template-columns: 3fr 2fr;*/
     background: #c8dfdb;
     padding: 20px;
     border-radius: 15px;
@@ -157,7 +153,6 @@ button:hover {
     background-color: #dc2626;
 }
 
-/*grid!!!!*/
 .container {  display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -235,7 +230,6 @@ button:hover {
 
 .t1 {
     display: grid;
-    /*grid-column: 4fr 1fr;*/
     background: white;
     padding: 20px;
     border-radius: 20px;
@@ -250,16 +244,7 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     color:#3368A0;
 }
-/*@font-face {*/
-/*    font-family: lilita-one;*/
-/*    src: url('./Fonts/Lilita_One/LilitaOne-Regular.ttf');*/
-/*}*/
 
-/*.lilita-one-regular {*/
-/*    font-family: "Lilita One", sans-serif;*/
-/*    font-weight: 400;*/
-/*    font-style: normal;*/
-/*}*/
 nom {
     font-size: 30px;
     color: #3368A0;
@@ -280,8 +265,4 @@ input[type="text"], input[type="number"], select {
     font-size: 0.95rem;
     color: #3368a0;
     background: #F2EFE7FF;
-}
-
-.info{
-
 }

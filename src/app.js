@@ -21,7 +21,6 @@ function afegirElement() {
     };
     llistaTamagochis.push(valors);
     console.table(llistaTamagochis);
-    // console.log(valors);
     // Actualitzar la pantalla
     actualitzarUI();
 }
@@ -32,21 +31,6 @@ function guardarCanvis() {
 }
 // 5. Funció per dibuixar l'array al DOM
 function actualitzarUI() {
-    // const nom = document.getElementById('nom') as HTMLElement;
-    // const aparença = document.getElementById('aparença') as HTMLElement;
-    // const edat = document.getElementById('edat') as HTMLElement;
-    // const condicions = document.getElementById('condicions') as HTMLElement;
-    // const pes = document.getElementById('pes') as HTMLElement;
-    //
-    // nom.innerText= valors.nom
-    // aparença.innerText= valors.aparença;
-    // edat.innerText= "Edat: " + String(valors.edat);
-    // pes.innerText=String(valors.pes); // Com que és un número l'hem de passat a text
-    // if (valors.condicions===true) {  //Exemple de com tractar un checkBox de vertader o fals
-    //     condicions.innerText="Actiu"
-    // }else{
-    //     condicions.innerText="No disponible"
-    // }
     const contenidor = document.getElementById('contenidorAnimals');
     contenidor.innerHTML = '<h1>Llista Animals </h1>';
     let html = '';
@@ -98,10 +82,10 @@ function actualitzarUI() {
                 html += '<h3> Felicitat: ' + llistaTamagochis[i].felicitat.toFixed(0) + '</h3>';
                 html += '<\/div>';
                 html += '<div>';
-                if (llistaTamagochis[i].aparença === 'Opció 1') {
+                if (llistaTamagochis[i].aparença === 'Hachi') {
                     html += `<img id="estatImg" src="img/1.png" width="200px" height="200px" alt="Apariencia">`;
                 }
-                else if (llistaTamagochis[i].aparença === 'Opció 2') {
+                else if (llistaTamagochis[i].aparença === 'Nagi') {
                     html += `<img id="estatImg2" src="img/2.png" width="200px" height="200px" alt="Apariencia">`;
                 }
                 else {
@@ -241,5 +225,5 @@ function canviTema() {
     const cos = document.getElementById('bodyID');
     if (cos)
         cos.classList.toggle('vermell');
-    cos.classList.add('vermell');
+    // cos.classList.add('vermell');
 }
