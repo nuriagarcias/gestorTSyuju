@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="bodyID">
 <!--<div class="general">-->
 
 
@@ -29,7 +29,10 @@
             <div class="generador">
 
                 <div class="card2">
-                    <h2>Generació de tamagochis</h2>
+                    <div class="card3" style="background:#66A3BFFF; padding:5px">
+                        <h1 style="color:#F2EFE7">Generació de tamagochis</h1>
+                    </div>
+
                     <div class="enunciats">
                     <div class="field">
                         <label for="iNom">Nombre:</label>
@@ -57,39 +60,50 @@
                         <input type="number" id="iPes" value="0">
                     </div>
 
-                    <div class="field-checkbox">
+                    <div class="field-checkbox" style="margin:0">
                         <label>
-                            <input type="checkbox" id="iCondicions"> Acepta términos y condiciones para ser legal (ninguno)
+                            <input type="checkbox" id="iCondicions">
+                            Acepta términos y condiciones para ser legal (ninguno)
                         </label>
                     </div>
                     </div>
 
-                    <button id="btnAfegir">Afegir a la Llista</button>
+                    <button style="margin-top:20px" id="btnAfegir">Afegir a la Llista</button>
                 </div>
             </div>
         </div>
         <div class="organitzador">
 
             <div class="card1">
-                <h1>Eines d'organització</h1>
-                <div class="field">
-                    <label for="iTema">Temes:</label>
-                    <select id="iTema">
-<!--                        <option value="Opció A">Opció 1</option>-->
-<!--                        <option value="Opció B">Opció 2</option>-->
-<!--                        <option value="Opció C">Opció 3</option>-->
-                    </select>
-                </div>
-                <button onclick="ordenarNom()">Ordenar por orden alfabético</button>
-                <div class="enunciats">
 
+                <div class="card3">
+                    <h1 style="color:#3368A0">Eines d'organització</h1>
+                </div>
+
+                <div style="background: #c8dfdb; border-radius: 15px; margin-top:25px; padding: 20px;">
                     <div class="field">
-                        <button onclick="ordenarEdatMajMen()">Ordenar por edad major a menor</button>
-                        <button onclick="ordenarPesMajMen()">Ordenar por peso mayor a menor</button>
+                        <button onclick="canviTema()">Cambiar Tema</button>
+<!--                        <label for="iTema">Temes:</label>-->
+<!--                        <select id="iTema">-->
+<!--                            &lt;!&ndash;                        <option value="Opció A">Opció 1</option>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <option value="Opció B">Opció 2</option>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <option value="Opció C">Opció 3</option>&ndash;&gt;-->
+<!--                        </select>-->
                     </div>
-                    <div class="field">
-                        <button onclick="ordenarEdatMenMaj()">Ordenar por edad menor a mayor</button>
-                        <button onclick="ordenarPesMenMaj()">Ordenar por peso menor a mayor</button>
+                    <p>Ordenar</p>
+                    <button onclick="ordenarNom()">Ordenar por nombre en orden alfabético</button>
+                    <div style="padding:0" class="enunciats">
+
+                        <div style="gap:10px" class="field">
+                            <button onclick="ordenarEdatMajMen()">Ordenar por edad mayor a menor</button>
+                            <button onclick="ordenarPesMajMen()">Ordenar por peso mayor a menor</button>
+                            <button onclick="ordenarFelicitatMajMen()">Ordenar por felicidad mayor a menor</button>
+                        </div>
+                        <div style="gap:10px" class="field">
+                            <button onclick="ordenarEdatMenMaj()">Ordenar por edad menor a mayor</button>
+                            <button onclick="ordenarPesMenMaj()">Ordenar por peso menor a mayor</button>
+                            <button onclick="ordenarFelicitatMenMaj()">Ordenar por felicidad menor a mayor</button>
+                        </div>
                     </div>
                 </div>
 

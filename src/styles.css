@@ -1,14 +1,16 @@
-/*.general {*/
-/*    display: grid;*/
-/*    grid-template-rows: 1fr 1fr;*/
-/*    gap: 20px;*/
-/*    margin: 20px;*/
-/*}*/
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+p{
+    font-size: 20px;
+    color:#3368A0;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 body {
@@ -18,16 +20,23 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: white;
+body.vermell{
+    background-color: #f4b0f6;
 }
+
+h1 {
+    color: #f2efe7;
+}
+
 .titol{
-    color: #F2EFE7;
+    color: #f2efe7;
     font-size: 50px;
     background-color: #66A3BF;
     border-radius: 20px;
-    margin-top:20px
+    margin-top:20px;
+    height:175px
 }
+
 .card1 {
     /*display: grid;*/
     /*grid-template-columns: 3fr 2fr;*/
@@ -65,6 +74,14 @@ h1 {
     padding-bottom: 8px;
 }
 
+.card3 {
+    /*display: grid;*/
+    /*grid-template-columns: 3fr 2fr;*/
+    background: #c8dfdb;
+    padding: 20px;
+    border-radius: 15px;
+}
+
 .field {
     display: flex;
     flex-direction: column;
@@ -79,6 +96,7 @@ h1 {
 label {
     font-size: 0.85rem;
     font-weight: 600;
+    color:#3368A0;
 }
 
 input[type="text"],
@@ -93,16 +111,17 @@ select {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #2563eb;
-    color: white;
+    background-color: #3368a0;
+    color: #f2efe7;
     border: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: #19497c;
 }
 
 .llista-grid {
@@ -192,7 +211,10 @@ button:hover {
     grid-template-areas:
     "part1 part2";
     grid-area: enunciats;
-    margin-top: 10px
+    margin-top: 10px;
+    background: #c8dfdb;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .organitzador { grid-area: organitzador; }
@@ -205,7 +227,10 @@ button:hover {
     "t1 t2 t3 t4";
     grid-area: enunciats;
     grid-area: tamagochis;
-
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .t1 {
@@ -217,11 +242,13 @@ button:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     background: #C8DFDB;
     height: 400px;
+
 }
 
 .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color:#3368A0;
 }
 /*@font-face {*/
 /*    font-family: lilita-one;*/
@@ -244,4 +271,17 @@ nom {
 
 errorNom{
     color: red;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 8px 12px;
+    border: 1px solid #66a3bf;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #3368a0;
+    background: #F2EFE7FF;
+}
+
+.info{
+
 }

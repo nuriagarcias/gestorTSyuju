@@ -88,14 +88,26 @@ function actualitzarUI() {
             }
             else {
                 html += '<div class=\'t1\'>';
-                html += '<div>';
                 html += '<nom>' + llistaTamagochis[i].nom + ' (ilegal)</nom>';
-                html += '<h3>' + llistaTamagochis[i].aparença + '</h3>';
+                html += '<div class=\"info\">';
+                html += '<div>';
                 html += '<h3> Edad: ' + llistaTamagochis[i].edat + '</h3>';
                 html += '<h3> Peso: ' + llistaTamagochis[i].pes.toFixed(0) + ' kg </h3>';
                 html += '<h3> Energia: ' + llistaTamagochis[i].energia.toFixed(0) + '</h3>';
                 html += '<h3> Hambre: ' + llistaTamagochis[i].fam.toFixed(0) + '</h3>';
                 html += '<h3> Felicitat: ' + llistaTamagochis[i].felicitat.toFixed(0) + '</h3>';
+                html += '<\/div>';
+                html += '<div>';
+                if (llistaTamagochis[i].aparença === 'Opció 1') {
+                    html += `<img id="estatImg" src="img/1.png" width="200px" height="200px" alt="Apariencia">`;
+                }
+                else if (llistaTamagochis[i].aparença === 'Opció 2') {
+                    html += `<img id="estatImg2" src="img/2.png" width="200px" height="200px" alt="Apariencia">`;
+                }
+                else {
+                    html += `<img id="estatImg3" src="img/3.png" width="250px" height="200px"  alt="Apariencia">`;
+                }
+                html += '<\/div>';
                 html += '<\/div>';
                 html += '<div class=\'botons\'>';
                 html += '<button style="margin: 5px" id="Dormir' + i + '" onclick="dormir(' + i + ')" >Dormir</button>';
@@ -208,6 +220,14 @@ function ordenarPesMajMen() {
     llistaTamagochis.sort((a, b) => b.pes - a.pes);
     actualitzarUI();
 }
+function ordenarFelicitatMajMen() {
+    llistaTamagochis.sort((a, b) => b.felicitat - a.felicitat);
+    actualitzarUI();
+}
+function ordenarFelicitatMenMaj() {
+    llistaTamagochis.sort((a, b) => a.felicitat - b.felicitat);
+    actualitzarUI();
+}
 function avisarNom() {
     console.log('no has puesto nada');
     const colorInt = document.getElementById('errorNom');
@@ -216,4 +236,10 @@ function avisarNom() {
 function llevarAvis() {
     const colorInt = document.getElementById('errorNom');
     colorInt.innerText = '';
+}
+function canviTema() {
+    const cos = document.getElementById('bodyID');
+    if (cos)
+        cos.classList.toggle('vermell');
+    cos.classList.add('vermell');
 }
