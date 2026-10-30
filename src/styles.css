@@ -26,6 +26,7 @@ h1 {
     font-size: 50px;
     background-color: #66A3BF;
     border-radius: 20px;
+    margin-top:20px
 }
 .card1 {
     /*display: grid;*/
@@ -34,6 +35,7 @@ h1 {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top:20px
 }
 
 .card1 h2 {
@@ -52,6 +54,7 @@ h1 {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top:50px
 }
 
 .card2 h2 {
@@ -185,10 +188,11 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
+    gap: 5px 20px;
     grid-template-areas:
     "part1 part2";
     grid-area: enunciats;
+    margin-top: 10px
 }
 
 .organitzador { grid-area: organitzador; }
@@ -206,15 +210,19 @@ button:hover {
 
 .t1 {
     display: grid;
-    grid-column: 4fr 1fr;
+    /*grid-column: 4fr 1fr;*/
     background: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     background: #C8DFDB;
-
+    height: 400px;
 }
 
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 /*@font-face {*/
 /*    font-family: lilita-one;*/
 /*    src: url('./Fonts/Lilita_One/LilitaOne-Regular.ttf');*/
@@ -231,3 +239,9 @@ nom {
     text-align: center;
 }
 
+.botons{
+}
+
+errorNom{
+    color: red;
+}

@@ -27,13 +27,14 @@
                 <h1>Títol</h1>
             </div>
             <div class="generador">
-                <h1>Generació de tamagochis</h1>
+
                 <div class="card2">
-                    <h2>Afegir Nou Tamagochi</h2>
+                    <h2>Generació de tamagochis</h2>
                     <div class="enunciats">
                     <div class="field">
                         <label for="iNom">Nombre:</label>
                         <input type="text" id="iNom" placeholder="Escribe el nombre de tu tamagochi">
+                        <errorNom id="errorNom"></errorNom>
                     </div>
 
                     <div class="field">
@@ -51,13 +52,14 @@
                     </div>
 
                     <div class="field">
-                        <label for="iPes">Peso:</label>
+                        <label for="iPes">Peso (kg
+                            ):</label>
                         <input type="number" id="iPes" value="0">
                     </div>
 
                     <div class="field-checkbox">
                         <label>
-                            <input type="checkbox" id="iCondicions"> Acepta términos y condiciones (ninguno)
+                            <input type="checkbox" id="iCondicions"> Acepta términos y condiciones para ser legal (ninguno)
                         </label>
                     </div>
                     </div>
@@ -66,48 +68,47 @@
                 </div>
             </div>
         </div>
-<!--        <div class="organitzador">-->
-<!--            <h1>Eines d'organització</h1>-->
-<!--            <div class="card1">-->
-<!--                <h2>Afegir Nou Element</h2>-->
+        <div class="organitzador">
 
-<!--                <div class="field">-->
-<!--                    <label for="iNom">Nom / Títol:</label>-->
-<!--                    <input type="text" id="iNom" placeholder="Escriu un nom">-->
-<!--                </div>-->
-
-<!--                <div class="field">-->
-<!--                    <label for="iTema">Temes:</label>-->
-<!--                    <select id="iTema">-->
+            <div class="card1">
+                <h1>Eines d'organització</h1>
+                <div class="field">
+                    <label for="iTema">Temes:</label>
+                    <select id="iTema">
 <!--                        <option value="Opció A">Opció 1</option>-->
 <!--                        <option value="Opció B">Opció 2</option>-->
 <!--                        <option value="Opció C">Opció 3</option>-->
-<!--                    </select>-->
-<!--                </div>-->
+                    </select>
+                </div>
+                <button onclick="ordenarNom()">Ordenar por orden alfabético</button>
+                <div class="enunciats">
 
-<!--                <div class="field">-->
-<!--                    <label for="iEdat">Edat:</label>-->
-<!--                    <input type="number" id="iEdat" value="0">-->
-<!--                </div>-->
+                    <div class="field">
+                        <button onclick="ordenarEdatMajMen()">Ordenar por edad major a menor</button>
+                        <button onclick="ordenarPesMajMen()">Ordenar por peso mayor a menor</button>
+                    </div>
+                    <div class="field">
+                        <button onclick="ordenarEdatMenMaj()">Ordenar por edad menor a mayor</button>
+                        <button onclick="ordenarPesMenMaj()">Ordenar por peso menor a mayor</button>
+                    </div>
+                </div>
 
-<!--                <div class="field-checkbox">-->
-<!--                    <label>-->
-<!--                        <input type="checkbox" id="iCondicions"> Actiu / Completat-->
-<!--                    </label>-->
-<!--                </div>-->
-
-<!--                <button id="btnGuardar">Guardar canvis</button>-->
-<!--            </div>-->
-<!--        </div>-->
+            </div>
+        </div>
     </div>
     <div class="tamagochis" id="contenidorAnimals">
         <div class="t1">
-            <div>
-                <h1 id="nom"></h1>
-                <h2 id="aparença"></h2>
-                <h2 id="edat"></h2>
-                <h2 id="pes"></h2>
-                <h2 id="condicions"></h2>
+            <div class="info">
+                <div>
+                    <h1 id="nom"></h1>
+                    <h2 id="aparença"></h2>
+                    <h2 id="edat"></h2>
+                    <h2 id="pes"></h2>
+                    <h2 id="condicions"></h2>
+                </div>
+                <div>
+
+                </div>
             </div>
             <div class="botons">
 
