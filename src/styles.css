@@ -266,3 +266,9 @@ input[type="text"], input[type="number"], select {
     color: #3368a0;
     background: #F2EFE7FF;
 }
+
+.nomBoto{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap:20px;
+}

@@ -1,7 +1,38 @@
 "use strict";
 let valors;
 //Cream una llista d'elements
-let llistaTamagochis = [];
+let llistaTamagochis = [
+    {
+        "nom": "Hachi",
+        "pes": 3,
+        "aparença": "Opció 1",
+        "edat": 1,
+        "condicions": true,
+        "energia": 100,
+        "fam": 0,
+        "felicitat": 100
+    },
+    {
+        "nom": "Nagi",
+        "pes": 10,
+        "aparença": "Opció 2",
+        "edat": 17,
+        "condicions": true,
+        "energia": 100,
+        "fam": 0,
+        "felicitat": 100
+    },
+    {
+        "nom": "Cinnamon",
+        "pes": 4,
+        "aparença": "Opció 3",
+        "edat": 3,
+        "condicions": true,
+        "energia": 100,
+        "fam": 0,
+        "felicitat": 100
+    }
+];
 // 2. Funció per llegir el formulari i afegir un nou element a l'array
 function afegirElement() {
     const inputNom = document.getElementById('iNom');
@@ -42,7 +73,12 @@ function actualitzarUI() {
             llevarAvis();
             if (llistaTamagochis[i].condicions === true) {
                 html += '<div class=\'t1\'>';
+                html += '<div class=\'nomBoto\'>';
                 html += '<nom>' + llistaTamagochis[i].nom + '</nom>';
+                html += '<div style="text-align:end">';
+                html += '<button style="width:30px; " id="Eliminar' + i + '" onclick="eliminarTamagochi(' + i + ')" >X</button>';
+                html += '<\/div>';
+                html += '<\/div>';
                 html += '<div class=\"info\">';
                 html += '<div>';
                 html += '<h3> Edad: ' + llistaTamagochis[i].edat + '</h3>';
@@ -56,23 +92,28 @@ function actualitzarUI() {
                     html += `<img id="estatImg" src="img/1.png" width="200px" height="200px" alt="Apariencia">`;
                 }
                 else if (llistaTamagochis[i].aparença === 'Opció 2') {
-                    html += `<img id="estatImg2" src="img/2.png" alt="Apariencia">`;
+                    html += `<img id="estatImg2" src="img/2.png" width="200px" height="200px" alt="Apariencia">`;
                 }
                 else {
-                    html += `<img id="estatImg3" src="img/3.png" alt="Apariencia">`;
+                    html += `<img id="estatImg3" src="img/3.png" width="250px" height="200px" alt="Apariencia">`;
                 }
                 html += '<\/div>';
                 html += '<\/div>';
                 html += '<div class=\'botons\'>';
-                html += '<button style="margin: 5px" id="Dormir' + i + '" onclick="dormir(' + i + ')" >Dormir</button>';
-                html += '<button style="margin: 5px" id="Comer' + i + '" onclick="menjar(' + i + ')" >Comer</button>';
-                html += '<button style="margin: 5px" id="Jugar' + i + '" onclick="jugar(' + i + ')" >Jugar</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Dormir' + i + '" onclick="dormir(' + i + ')" >Dormir</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Comer' + i + '" onclick="menjar(' + i + ')" >Comer</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Jugar' + i + '" onclick="jugar(' + i + ')" >Jugar</button>';
                 html += '<\/div>';
                 html += '<\/div>';
             }
             else {
                 html += '<div class=\'t1\'>';
+                html += '<div class=\'nomBoto\'>';
                 html += '<nom>' + llistaTamagochis[i].nom + ' (ilegal)</nom>';
+                html += '<div style="text-align:end">';
+                html += '<button style="width:30px; " id="Eliminar' + i + '" onclick="eliminarTamagochi(' + i + ')" >X</button>';
+                html += '<\/div>';
+                html += '<\/div>';
                 html += '<div class=\"info\">';
                 html += '<div>';
                 html += '<h3> Edad: ' + llistaTamagochis[i].edat + '</h3>';
@@ -82,10 +123,10 @@ function actualitzarUI() {
                 html += '<h3> Felicitat: ' + llistaTamagochis[i].felicitat.toFixed(0) + '</h3>';
                 html += '<\/div>';
                 html += '<div>';
-                if (llistaTamagochis[i].aparença === 'Hachi') {
+                if (llistaTamagochis[i].aparença === 'Opció 1') {
                     html += `<img id="estatImg" src="img/1.png" width="200px" height="200px" alt="Apariencia">`;
                 }
-                else if (llistaTamagochis[i].aparença === 'Nagi') {
+                else if (llistaTamagochis[i].aparença === 'Opció 2') {
                     html += `<img id="estatImg2" src="img/2.png" width="200px" height="200px" alt="Apariencia">`;
                 }
                 else {
@@ -94,9 +135,9 @@ function actualitzarUI() {
                 html += '<\/div>';
                 html += '<\/div>';
                 html += '<div class=\'botons\'>';
-                html += '<button style="margin: 5px" id="Dormir' + i + '" onclick="dormir(' + i + ')" >Dormir</button>';
-                html += '<button style="margin: 5px" id="Comer' + i + '" onclick="menjar(' + i + ')" >Comer</button>';
-                html += '<button style="margin: 5px" id="Jugar' + i + '" onclick="jugar(' + i + ')" >Jugar</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Dormir' + i + '" onclick="dormir(' + i + ')" >Dormir</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Comer' + i + '" onclick="menjar(' + i + ')" >Comer</button>';
+                html += '<button style="margin-top: 5px; margin-bottom:5px" id="Jugar' + i + '" onclick="jugar(' + i + ')" >Jugar</button>';
                 html += '<\/div>';
                 html += '<\/div>';
             }
@@ -226,4 +267,8 @@ function canviTema() {
     if (cos)
         cos.classList.toggle('vermell');
     // cos.classList.add('vermell');
+}
+function eliminarTamagochi(id) {
+    llistaTamagochis.splice(id, 1);
+    actualitzarUI();
 }
